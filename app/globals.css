@@ -12,6 +12,95 @@
   body {
     -webkit-print-color-adjust: exact;
     color-adjust: exact;
+    font-size: 12px; /* Base font size for print */
+  }
+
+  /* Reduce header font sizes for print */
+  h1 {
+    font-size: 24px !important;
+  }
+
+  h2 {
+    font-size: 18px !important;
+    margin-bottom: 12px !important;
+  }
+
+  h3 {
+    font-size: 16px !important;
+  }
+
+  /* Compact spacing for print */
+  .print\:text-sm {
+    font-size: 11px !important;
+  }
+
+  .print\:text-base {
+    font-size: 12px !important;
+  }
+
+  .print\:text-lg {
+    font-size: 14px !important;
+  }
+
+  .print\:text-xl {
+    font-size: 16px !important;
+  }
+
+  .print\:text-2xl {
+    font-size: 18px !important;
+  }
+
+  .print\:text-3xl {
+    font-size: 20px !important;
+  }
+
+  .print\:text-4xl {
+    font-size: 24px !important;
+  }
+
+  /* Reduce padding and margins for print */
+  .print\:p-4 {
+    padding: 16px !important;
+  }
+
+  .print\:p-6 {
+    padding: 20px !important;
+  }
+
+  .print\:mb-2 {
+    margin-bottom: 8px !important;
+  }
+
+  .print\:mb-3 {
+    margin-bottom: 10px !important;
+  }
+
+  .print\:mb-4 {
+    margin-bottom: 12px !important;
+  }
+
+  .print\:mb-6 {
+    margin-bottom: 16px !important;
+  }
+
+  .print\:space-y-4 > * + * {
+    margin-top: 12px !important;
+  }
+
+  .print\:space-y-6 > * + * {
+    margin-top: 16px !important;
+  }
+
+  .print\:space-y-8 > * + * {
+    margin-top: 20px !important;
+  }
+
+  .print\:leading-tight {
+    line-height: 1.25 !important;
+  }
+
+  .print\:leading-snug {
+    line-height: 1.375 !important;
   }
 
   .print\:hidden {
@@ -59,6 +148,21 @@
   h2,
   h3 {
     break-after: avoid;
+  }
+
+  /* Compact skill tags for print */
+  .print\:text-xs {
+    font-size: 10px !important;
+  }
+
+  .print\:px-2 {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  .print\:py-1 {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
   }
 }
 
