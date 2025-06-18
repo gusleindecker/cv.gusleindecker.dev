@@ -21,15 +21,17 @@ export default function CVPage() {
       linkedin: "https://www.linkedin.com/in/gusleindecker/",
       github: "https://github.com/gusleindecker", // Optional: add GitHub if you want
       website: "https://gusleindecker.dev/", // Optional: add personal website
-      summary: `A seasoned Frontend Engineer with a background in Advertising and over a decade of experience delivering high-quality web applications. Specialized in Vue.js (2 & 3), TypeScript, and modern JavaScript (ES6+), I’ve led the development of scalable, performant, and responsive user interfaces for the web. I also bring strong experience with React, Next.js, Nuxt, Tailwind CSS, SCSS, and Node.js, consistently transforming complex requirements into intuitive and visually refined digital experiences.
+      summary: `A seasoned Frontend Engineer with a background in Advertising and over a decade of experience delivering high-quality web applications. Specialized in Vue.js (2 & 3), TypeScript, and modern JavaScript (ES6+), I've led the development of scalable, performant, and responsive user interfaces for the web. I also bring strong experience with React, Next.js, Nuxt, Tailwind CSS, SCSS, and Node.js, consistently transforming complex requirements into intuitive and visually refined digital experiences.
 
-        As a technology professional, I’m deeply committed to continuous learning and growth. I stay ahead of industry trends, explore emerging tools, and value clean, maintainable code as much as user-centered design. I thrive in Agile environments, where cross-functional collaboration and adaptability are essential to building solutions that are not only technically sound but genuinely resonate with users.`,
+        As a technology professional, I'm deeply committed to continuous learning and growth. I stay ahead of industry trends, explore emerging tools, and value clean, maintainable code as much as user-centered design. I thrive in Agile environments, where cross-functional collaboration and adaptability are essential to building solutions that are not only technically sound but genuinely resonate with users.`,
     },
     experience: [
       {
         company: "Software Mind North America",
+        description:
+          "Software Mind is a global software company offering engineering, cloud, and AI solutions with 1,500+ experts worldwide.",
         location: "Remote",
-        totalDuration: "2021 - Present · 3 yrs 11 mos",
+        totalDuration: "July 2021 - Present · 3 yrs 11 mos",
         positions: [
           {
             title: "Team Leader",
@@ -39,6 +41,12 @@ export default function CVPage() {
               "Facilitating personal and professional issues for the consultants, ensuring smooth project execution.",
               "Improving team collaboration.",
             ],
+            skills: [
+              "Mentoring",
+              "Team Building",
+              "Team Leadership",
+              "Team Management",
+            ],
           },
           {
             title: "Senior Frontend Engineer",
@@ -46,25 +54,56 @@ export default function CVPage() {
             description: [
               "Developing and maintaining Software Mind's client applications using mostly Vue.js and TypeScript.",
             ],
+            skills: [
+              "Git",
+              "HTML5",
+              "JavaScript (ES6+)",
+              "Node.js",
+              "Nuxt",
+              "Pinia",
+              "Tailwind CSS",
+              "TypeScript",
+              "Vitest",
+              "Vue Router",
+              "Vue Use",
+              "Vue.js",
+            ],
           },
         ],
       },
       {
         company: "ADP Brazil Labs",
+        description:
+          "ADP Brazil Labs is ADP's tech hub in Porto Alegre, focused on building next-gen cloud HCM solutions. With 500+ employees, it supports global product development.",
         location: "Porto Alegre, Rio Grande do Sul, Brazil",
-        totalDuration: "2019 - 2021 · 2 yrs",
+        totalDuration: "Oct 2019 - Jul 2021 · 1 yr 10 mos",
         positions: [
           {
             title: "Senior Software Engineer - Frontend Specialist",
-            duration: "Oct 2019 - Jul 2021 · 1 yr 10 mos",
+            duration: "",
             description: [
               "Worked on the GETS team in developing and maintaining core Vue.js UI components that are reused in multiple internal ADP applications.",
+            ],
+            skills: [
+              "CSS3",
+              "Git",
+              "HTML5",
+              "JavaScript (ES6+)",
+              "RESTful APIs",
+              "SCSS/Sass",
+              "TypeScript",
+              "Vue Router",
+              "Vue.js",
+              "Vuex",
+              "Webpack",
             ],
           },
         ],
       },
       {
         company: "Dell Technologies",
+        description:
+          "Dell Technologies is a global tech leader providing PCs, servers, storage, and AI-optimized IT solutions across 180+ countries.",
         location: "Eldorado do Sul, Rio Grande do Sul, Brazil",
         totalDuration: "Jul 2017 - Oct 2019 · 2 yrs 4 mos",
         positions: [
@@ -74,11 +113,28 @@ export default function CVPage() {
             description: [
               "Worked on the Dell Financial Services team developing the Customer Portal: Dell's end-user application for managing consumer, small business and enterprise finance accounts in US.",
             ],
+            skills: [
+              "Angular Material",
+              "Angular",
+              "AngularJS",
+              "CSS3",
+              "Express.js",
+              "Git",
+              "HTML5",
+              "JavaScript (ES6+)",
+              "MongoDB",
+              "Node.js",
+              "RESTful APIs",
+              "Salesforce.com",
+              "Webpack",
+            ],
           },
         ],
       },
       {
-        company: "Stefanini Brasil",
+        company: "Stefanini Group",
+        description:
+          "Stefanini Group is a Brazilian multinational IT company offering digital solutions in cloud, AI, cybersecurity, and SAP. With ~30,000 employees, it operates in 40+ countries.",
         location: "Porto Alegre, Rio Grande do Sul, Brazil",
         totalDuration: "Sep 2015 - Jul 2017 · 1 yr 11 mos",
         positions: [
@@ -88,21 +144,54 @@ export default function CVPage() {
             description: [
               "Worked initially on the TNT team as an outsourced Frontend Developer for Dell Technologies developing A/B tests on the company's various e-commerce sites. And then worked in the Dell Financial Services team developing the Customer Portal US.",
             ],
+            skills: [
+              "A/B Testing",
+              "Bootstrap",
+              "CSS3",
+              "Git",
+              "HTML5",
+              "JavaScript",
+              "jQuery",
+              "Node.js",
+              "React",
+            ],
+          },
+        ],
+      },
+      {
+        company: "LCG IT",
+        description:
+          "LCG IT is a tech company from Porto Alegre specializing in SaaS, telecom expense management, mobile solutions, and IT consulting.",
+        location: "Porto Alegre, Rio Grande do Sul, Brazil",
+        totalDuration: "Apr 2014 - Sep 2015 · 1 yr 6 mos",
+        positions: [
+          {
+            title: "Frontend Developer / UI Designer",
+            duration: "",
+            description: [
+              "Worked as a frontend developer and user interface designer on several projects for the company.",
+            ],
+            skills: [
+              "Adobe Photoshop",
+              "Adobe XD",
+              "Backbone.js",
+              "Bootstrap",
+              "CSS3",
+              "Git",
+              "HTML5",
+              "JavaScript",
+              "jQuery",
+            ],
           },
         ],
       },
     ],
     education: [
       {
-        degree: "Bachelor of Science in Computer Science",
-        school: "Universidade Federal do Rio Grande do Sul (UFRGS)",
-        duration: "2014 - 2018",
-        gpa: "3.7/4.0",
-      },
-      {
-        degree: "Technical Course in Information Technology",
-        school: "Instituto Federal do Rio Grande do Sul",
-        duration: "2012 - 2014",
+        degree: "Bachelor's Degree in Social Communication (Advertising)",
+        school: "Pontifícia Universidade Católica do Rio Grande do Sul (PUCRS)",
+        duration: "Jan 1994 - Jan 1999",
+        gpa: "",
       },
     ],
     skills: [
@@ -240,6 +329,12 @@ export default function CVPage() {
                       <h3 className="text-xl font-bold text-gray-900 print:text-lg">
                         {company.company}
                       </h3>
+                      {/* Company Description */}
+                      <div className="text-gray-600 text-sm mt-2 mb-3 print:text-sm print:mt-1 print:mb-2">
+                        <p className="leading-relaxed print:leading-snug">
+                          {company.description}
+                        </p>
+                      </div>
                       <div className="flex flex-col md:flex-row md:justify-between text-gray-600 mt-1">
                         <p className="flex items-center gap-1 print:text-sm">
                           <MapPin className="w-4 h-4" aria-hidden="true" />
@@ -280,7 +375,7 @@ export default function CVPage() {
                                 </span>
                               </div>
                               <ul
-                                className={`list-inside space-y-1 print:space-y-0 text-gray-700 print:text-sm ${
+                                className={`list-inside space-y-1 print:space-y-0 text-gray-700 print:text-sm mb-3 print:mb-2 ${
                                   position.description.length > 1 && "list-disc"
                                 }`}
                               >
@@ -290,6 +385,30 @@ export default function CVPage() {
                                   </li>
                                 ))}
                               </ul>
+
+                              {/* Skills for this position */}
+                              <div
+                                className={`mt-3 ${
+                                  positionIndex !==
+                                    company.positions.length - 1 && `mb-3`
+                                } print:mt-2`}
+                              >
+                                <div className="flex items-center gap-2 mb-2 print:mb-1">
+                                  <span className="text-sm font-medium text-gray-600 print:text-xs">
+                                    Technologies and tools:
+                                  </span>
+                                </div>
+                                <div className="flex flex-wrap gap-2 print:gap-1">
+                                  {position.skills.map((skill, skillIndex) => (
+                                    <span
+                                      key={skillIndex}
+                                      className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium print:bg-gray-100 print:text-gray-800 print:text-xs print:px-2 print:py-1"
+                                    >
+                                      {skill}
+                                    </span>
+                                  ))}
+                                </div>
+                              </div>
                             </div>
                           </div>
                         ))}
@@ -307,7 +426,7 @@ export default function CVPage() {
                   className="w-5 h-5 text-blue-600"
                   aria-hidden="true"
                 />
-                Education
+                Academic Education
               </h2>
               <div className="space-y-4 print:space-y-2">
                 {cvData.education.map((edu, index) => (
