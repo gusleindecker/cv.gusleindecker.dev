@@ -262,7 +262,7 @@ export default function CVPage() {
       {/* Header with download button - hidden in print */}
       <header className="bg-white shadow-sm print:hidden sticky top-0 z-10">
         <div className="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-xl font-semibold text-gray-900">My CV</h1>
+          <h1 className="text-xl font-semibold text-gray-900">Resume</h1>
           <button
             onClick={handleDownloadPDF}
             className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
@@ -278,7 +278,7 @@ export default function CVPage() {
       <main className="max-w-4xl mx-auto p-4 print:p-0 print:max-w-none">
         <div className="bg-white rounded-lg shadow-lg print:shadow-none print:rounded-none">
           {/* Personal Info Header */}
-          <header className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 print:bg-blue-600 print:p-6">
+          <header className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 print:bg-blue-600 print:compact-header">
             <div className="flex flex-col md:flex-row md:items-center gap-6">
               <div className="flex-1">
                 <h1 className="text-3xl md:text-4xl font-bold mb-2 print:text-3xl print:mb-2 print:leading-tight">
@@ -309,10 +309,10 @@ export default function CVPage() {
             </div>
           </header>
 
-          <div className="p-8 space-y-8 print:p-4 print:space-y-3">
+          <div className="p-8 space-y-8 print:p-4 print:space-y-1">
             {/* Summary */}
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2 print:text-xl print:mb-2">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2 print:text-xl print:mb-1">
                 <User className="w-5 h-5 text-blue-600" aria-hidden="true" />
                 Professional Summary
               </h2>
@@ -322,8 +322,8 @@ export default function CVPage() {
             </section>
 
             {/* Skills */}
-            <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2 print:text-xl print:mb-2">
+            <section className="skills-container">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2 print:text-xl print:mb-1">
                 <PencilRuler
                   className="w-5 h-5 text-blue-600"
                   aria-hidden="true"
@@ -343,22 +343,22 @@ export default function CVPage() {
             </section>
 
             {/* Experience */}
-            <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2 print:text-xl print:mb-3">
+            <section className="experience-section">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2 print:text-xl print:mb-2">
                 <Building
                   className="w-5 h-5 text-blue-600"
                   aria-hidden="true"
                 />
                 Professional Experience
               </h2>
-              <div className="space-y-8 print:space-y-4">
+              <div className="space-y-8 print:space-y-2">
                 {cvData.experience.map((company, companyIndex) => (
                   <div
                     key={companyIndex}
-                    className="border-l-4 border-blue-200 pl-6"
+                    className="border-l-4 border-blue-200 pl-6 company-block"
                   >
                     {/* Company Header */}
-                    <div className="mb-4 print:mb-2">
+                    <div className="mb-4 print:mb-2 company-header">
                       <h3 className="text-xl font-bold text-gray-900 print:text-lg">
                         {company.company}
                       </h3>
@@ -395,7 +395,7 @@ export default function CVPage() {
                                   company.positions.length - 1 && "h-4"
                               } ${positionIndex === 0 && "mt-3"}`}
                             ></div>
-                            <div className="grow pl-4 print:mb-2">
+                            <div className="grow pl-4 print:mb-1">
                               <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2 print:mb-1 relative">
                                 <div className="flex-shrink-0 absolute -left-[1.3rem] top-2.5">
                                   <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
@@ -408,7 +408,7 @@ export default function CVPage() {
                                 </span>
                               </div>
                               <ul
-                                className={`list-inside space-y-1 print:space-y-0 text-gray-700 print:text-sm mb-3 print:mb-2 ${
+                                className={`list-inside space-y-1 print:space-y-0 text-gray-700 print:text-sm mb-3 print:mb-1 ${
                                   position.description.length > 1 && "list-disc"
                                 }`}
                               >
@@ -424,7 +424,7 @@ export default function CVPage() {
                                 className={`mt-3 ${
                                   positionIndex !==
                                     company.positions.length - 1 && `mb-3`
-                                } print:mt-2`}
+                                } print:mt-1`}
                               >
                                 <div className="flex items-center gap-2 mb-2 print:mb-1">
                                   <span className="text-sm font-medium text-gray-600 print:text-xs">
