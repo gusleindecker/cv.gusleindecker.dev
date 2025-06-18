@@ -12,95 +12,122 @@
   body {
     -webkit-print-color-adjust: exact;
     color-adjust: exact;
-    font-size: 12px; /* Base font size for print */
+    font-size: 11px; /* Reduced base font size for print */
+    line-height: 1.3; /* Tighter line height */
   }
 
   /* Reduce header font sizes for print */
   h1 {
-    font-size: 24px !important;
+    font-size: 20px !important;
+    margin-bottom: 6px !important;
   }
 
   h2 {
-    font-size: 18px !important;
-    margin-bottom: 12px !important;
+    font-size: 16px !important;
+    margin-bottom: 8px !important;
   }
 
   h3 {
-    font-size: 16px !important;
+    font-size: 14px !important;
+    margin-bottom: 4px !important;
+  }
+
+  h4 {
+    font-size: 13px !important;
+    margin-bottom: 3px !important;
   }
 
   /* Compact spacing for print */
   .print\:text-sm {
-    font-size: 11px !important;
+    font-size: 10px !important;
+    line-height: 1.2 !important;
   }
 
   .print\:text-base {
-    font-size: 12px !important;
+    font-size: 11px !important;
+    line-height: 1.3 !important;
   }
 
   .print\:text-lg {
-    font-size: 14px !important;
+    font-size: 12px !important;
+    line-height: 1.3 !important;
   }
 
   .print\:text-xl {
-    font-size: 16px !important;
+    font-size: 14px !important;
+    line-height: 1.3 !important;
   }
 
   .print\:text-2xl {
-    font-size: 18px !important;
+    font-size: 16px !important;
+    line-height: 1.3 !important;
   }
 
   .print\:text-3xl {
-    font-size: 20px !important;
+    font-size: 18px !important;
+    line-height: 1.2 !important;
   }
 
   .print\:text-4xl {
-    font-size: 24px !important;
+    font-size: 20px !important;
+    line-height: 1.2 !important;
   }
 
-  /* Reduce padding and margins for print */
+  /* Significantly reduce padding and margins for print */
   .print\:p-4 {
-    padding: 16px !important;
+    padding: 12px !important;
   }
 
   .print\:p-6 {
-    padding: 20px !important;
+    padding: 16px !important;
+  }
+
+  .print\:mb-1 {
+    margin-bottom: 3px !important;
   }
 
   .print\:mb-2 {
-    margin-bottom: 8px !important;
+    margin-bottom: 4px !important;
   }
 
   .print\:mb-3 {
-    margin-bottom: 10px !important;
+    margin-bottom: 6px !important;
   }
 
   .print\:mb-4 {
-    margin-bottom: 12px !important;
+    margin-bottom: 8px !important;
   }
 
   .print\:mb-6 {
-    margin-bottom: 16px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .print\:space-y-2 > * + * {
+    margin-top: 6px !important;
+  }
+
+  .print\:space-y-3 > * + * {
+    margin-top: 8px !important;
   }
 
   .print\:space-y-4 > * + * {
-    margin-top: 12px !important;
+    margin-top: 10px !important;
   }
 
   .print\:space-y-6 > * + * {
-    margin-top: 16px !important;
+    margin-top: 12px !important;
   }
 
   .print\:space-y-8 > * + * {
-    margin-top: 20px !important;
+    margin-top: 14px !important;
   }
 
   .print\:leading-tight {
-    line-height: 1.25 !important;
+    line-height: 1.2 !important;
   }
 
   .print\:leading-snug {
-    line-height: 1.375 !important;
+    line-height: 1.3 !important;
   }
 
   .print\:hidden {
@@ -139,30 +166,54 @@
     color: #1f2937 !important;
   }
 
-  /* Ensure proper page breaks */
+  /* Prevent unwanted page breaks */
   section {
-    break-inside: avoid;
+    break-inside: avoid-page;
+    page-break-inside: avoid;
   }
 
   h1,
   h2,
-  h3 {
-    break-after: avoid;
+  h3,
+  h4 {
+    break-after: avoid-page;
+    page-break-after: avoid;
   }
 
   /* Compact skill tags for print */
   .print\:text-xs {
-    font-size: 10px !important;
+    font-size: 9px !important;
+    line-height: 1.2 !important;
   }
 
   .print\:px-2 {
-    padding-left: 8px !important;
-    padding-right: 8px !important;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
   }
 
   .print\:py-1 {
-    padding-top: 4px !important;
-    padding-bottom: 4px !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+  }
+
+  /* Reduce list spacing */
+  ul,
+  ol {
+    margin-bottom: 8px !important;
+  }
+
+  li {
+    margin-bottom: 2px !important;
+  }
+
+  /* Compact paragraph spacing */
+  p {
+    margin-bottom: 6px !important;
+  }
+
+  /* Reduce section spacing significantly */
+  section + section {
+    margin-top: 16px !important;
   }
 }
 

@@ -21,11 +21,9 @@ export default function CVPage() {
       linkedin: "https://www.linkedin.com/in/gusleindecker/",
       github: "https://github.com/gusleindecker", // Optional: add GitHub if you want
       website: "https://gusleindecker.dev/", // Optional: add personal website
-      summary: `I'm a Senior Frontend Engineer at Software Mind North America, focused on building fast, intuitive, and scalable user interfaces. With deep expertise in Vue.js, TypeScript, and modern web tech, I turn complex requirements into seamless, responsive experiences that users love.
+      summary: `A seasoned Frontend Engineer with a background in Advertising and over a decade of experience delivering high-quality web applications. Specialized in Vue.js (2 & 3), TypeScript, and modern JavaScript (ES6+), I’ve led the development of scalable, performant, and responsive user interfaces for the web. I also bring strong experience with React, Next.js, Nuxt, Tailwind CSS, SCSS, and Node.js, consistently transforming complex requirements into intuitive and visually refined digital experiences.
 
-        Over the years, I've delivered high-performance web and mobile apps across industries, combining clean code with a strong eye for design. I enjoy bridging the gap between technical precision and user needs, always aiming for solutions that are both elegant and practical.
-
-        I'm also a lifelong learner, constantly exploring new tools, trends, and best practices to stay ahead in the ever-evolving frontend landscape.`,
+        As a technology professional, I’m deeply committed to continuous learning and growth. I stay ahead of industry trends, explore emerging tools, and value clean, maintainable code as much as user-centered design. I thrive in Agile environments, where cross-functional collaboration and adaptability are essential to building solutions that are not only technically sound but genuinely resonate with users.`,
     },
     experience: [
       {
@@ -52,48 +50,43 @@ export default function CVPage() {
         ],
       },
       {
-        company: "Tech Solutions Inc.",
-        location: "Porto Alegre, RS",
+        company: "ADP Brazil Labs",
+        location: "Porto Alegre, Rio Grande do Sul, Brazil",
         totalDuration: "2019 - 2021 · 2 yrs",
         positions: [
           {
-            title: "Frontend Developer",
-            duration: "Mar 2020 - May 2021 · 1 yr 3 mos",
+            title: "Senior Software Engineer - Frontend Specialist",
+            duration: "Oct 2019 - Jul 2021 · 1 yr 10 mos",
             description: [
-              "Developed and maintained multiple client-facing web applications using Vue.js and Nuxt.js",
-              "Implemented pixel-perfect designs and ensured cross-browser compatibility",
-              "Integrated RESTful APIs and GraphQL endpoints for dynamic data rendering",
-              "Collaborated with UX/UI designers to create intuitive user experiences",
-              "Participated in code reviews and maintained high code quality standards",
-            ],
-          },
-          {
-            title: "Junior Frontend Developer",
-            duration: "Aug 2019 - Feb 2020 · 7 mos",
-            description: [
-              "Built responsive web components using HTML5, CSS3, and JavaScript",
-              "Assisted in the development of Vue.js applications under senior developer guidance",
-              "Fixed bugs and implemented minor features across various client projects",
-              "Learned modern development workflows including Git, webpack, and npm",
-              "Participated in daily standups and sprint retrospectives",
+              "Worked on the GETS team in developing and maintaining core Vue.js UI components that are reused in multiple internal ADP applications.",
             ],
           },
         ],
       },
       {
-        company: "Digital Agency Brazil",
-        location: "Porto Alegre, RS",
-        totalDuration: "2018 - 2019 · 1 yr",
+        company: "Dell Technologies",
+        location: "Eldorado do Sul, Rio Grande do Sul, Brazil",
+        totalDuration: "Jul 2017 - Oct 2019 · 2 yrs 4 mos",
         positions: [
           {
-            title: "Full Stack Developer",
-            duration: "Jan 2018 - Jul 2019 · 1 yr 7 mos",
+            title: "Senior Software Engineer - Frontend Specialist",
+            duration: "",
             description: [
-              "Built responsive websites and web applications using modern JavaScript frameworks",
-              "Developed backend services with Node.js and Express.js",
-              "Worked with databases including MongoDB and PostgreSQL",
-              "Implemented CI/CD pipelines and deployment automation",
-              "Provided technical support and maintenance for existing projects",
+              "Worked on the Dell Financial Services team developing the Customer Portal: Dell's end-user application for managing consumer, small business and enterprise finance accounts in US.",
+            ],
+          },
+        ],
+      },
+      {
+        company: "Stefanini Brasil",
+        location: "Porto Alegre, Rio Grande do Sul, Brazil",
+        totalDuration: "Sep 2015 - Jul 2017 · 1 yr 11 mos",
+        positions: [
+          {
+            title: "Senior Frontend Developer",
+            duration: "",
+            description: [
+              "Worked initially on the TNT team as an outsourced Frontend Developer for Dell Technologies developing A/B tests on the company's various e-commerce sites. And then worked in the Dell Financial Services team developing the Customer Portal US.",
             ],
           },
         ],
@@ -215,10 +208,10 @@ export default function CVPage() {
             </div>
           </header>
 
-          <div className="p-8 space-y-8 print:p-4 print:space-y-4">
+          <div className="p-8 space-y-8 print:p-4 print:space-y-3">
             {/* Summary */}
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2 print:text-xl print:mb-3">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2 print:text-xl print:mb-2">
                 <User className="w-5 h-5 text-blue-600" aria-hidden="true" />
                 Professional Summary
               </h2>
@@ -229,30 +222,30 @@ export default function CVPage() {
 
             {/* Experience */}
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2 print:text-xl print:mb-3">
                 <Building
                   className="w-5 h-5 text-blue-600"
                   aria-hidden="true"
                 />
                 Professional Experience
               </h2>
-              <div className="space-y-8">
+              <div className="space-y-8 print:space-y-4">
                 {cvData.experience.map((company, companyIndex) => (
                   <div
                     key={companyIndex}
                     className="border-l-4 border-blue-200 pl-6"
                   >
                     {/* Company Header */}
-                    <div className="mb-4">
+                    <div className="mb-4 print:mb-2">
                       <h3 className="text-xl font-bold text-gray-900 print:text-lg">
                         {company.company}
                       </h3>
                       <div className="flex flex-col md:flex-row md:justify-between text-gray-600 mt-1">
-                        <p className="flex items-center gap-1">
+                        <p className="flex items-center gap-1 print:text-sm">
                           <MapPin className="w-4 h-4" aria-hidden="true" />
                           {company.location}
                         </p>
-                        <p className="flex items-center gap-1 mt-1 md:mt-0">
+                        <p className="flex items-center gap-1 mt-1 md:mt-0 print:text-sm">
                           <Calendar className="w-4 h-4" aria-hidden="true" />
                           {company.totalDuration}
                         </p>
@@ -274,8 +267,8 @@ export default function CVPage() {
                                   company.positions.length - 1 && "h-4"
                               } ${positionIndex === 0 && "mt-3"}`}
                             ></div>
-                            <div className="grow pl-4">
-                              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2 relative">
+                            <div className="grow pl-4 print:mb-2">
+                              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2 print:mb-1 relative">
                                 <div className="flex-shrink-0 absolute -left-[1.3rem] top-2.5">
                                   <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
                                 </div>
@@ -287,12 +280,14 @@ export default function CVPage() {
                                 </span>
                               </div>
                               <ul
-                                className={`list-inside space-y-1 text-gray-700 print:text-sm ${
+                                className={`list-inside space-y-1 print:space-y-0 text-gray-700 print:text-sm ${
                                   position.description.length > 1 && "list-disc"
                                 }`}
                               >
                                 {position.description.map((item, i) => (
-                                  <li key={i}>{item}</li>
+                                  <li key={i} className="print:mb-1">
+                                    {item}
+                                  </li>
                                 ))}
                               </ul>
                             </div>
@@ -307,14 +302,14 @@ export default function CVPage() {
 
             {/* Education */}
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2 print:text-xl print:mb-3">
                 <GraduationCap
                   className="w-5 h-5 text-blue-600"
                   aria-hidden="true"
                 />
                 Education
               </h2>
-              <div className="space-y-4">
+              <div className="space-y-4 print:space-y-2">
                 {cvData.education.map((edu, index) => (
                   <div key={index} className="border-l-4 border-blue-200 pl-6">
                     <h3 className="text-xl font-semibold text-gray-900 print:text-lg">
@@ -323,7 +318,7 @@ export default function CVPage() {
                     <p className="text-lg text-blue-600 font-medium print:text-base">
                       {edu.school}
                     </p>
-                    <div className="flex flex-col md:flex-row md:justify-between text-gray-600 mt-1">
+                    <div className="flex flex-col md:flex-row md:justify-between text-gray-600 mt-1 print:text-sm">
                       <span className="flex items-center gap-1">
                         <Calendar className="w-4 h-4" aria-hidden="true" />
                         {edu.duration}
@@ -337,10 +332,10 @@ export default function CVPage() {
 
             {/* Skills */}
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6 print:text-xl print:mb-3">
                 Technical Skills
               </h2>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 print:gap-1">
                 {cvData.skills.map((skill, index) => (
                   <span
                     key={index}
@@ -354,23 +349,25 @@ export default function CVPage() {
 
             {/* Certifications */}
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2 print:text-xl print:mb-3">
                 <Award className="w-5 h-5 text-blue-600" aria-hidden="true" />
                 Certifications
               </h2>
-              <div className="space-y-3">
+              <div className="space-y-3 print:space-y-2">
                 {cvData.certifications.map((cert, index) => (
                   <div
                     key={index}
                     className="flex flex-col md:flex-row md:justify-between"
                   >
                     <div>
-                      <h3 className="font-semibold text-gray-900">
+                      <h3 className="font-semibold text-gray-900 print:text-base">
                         {cert.name}
                       </h3>
-                      <p className="text-gray-600">{cert.issuer}</p>
+                      <p className="text-gray-600 print:text-sm">
+                        {cert.issuer}
+                      </p>
                     </div>
-                    <span className="text-gray-600 mt-1 md:mt-0">
+                    <span className="text-gray-600 mt-1 md:mt-0 print:text-sm">
                       {cert.date}
                     </span>
                   </div>
