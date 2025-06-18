@@ -1,12 +1,14 @@
 "use client";
 import {
-  Download,
-  MapPin,
-  Linkedin,
-  Calendar,
-  Building,
-  GraduationCap,
   Award,
+  Building,
+  Calendar,
+  Download,
+  Globe,
+  GraduationCap,
+  Linkedin,
+  MapPin,
+  PencilRuler,
   User,
 } from "lucide-react";
 
@@ -229,14 +231,24 @@ export default function CVPage() {
     ],
     certifications: [
       {
-        name: "AWS Certified Solutions Architect",
-        issuer: "Amazon Web Services",
-        date: "2023",
+        name: "Intensive Course in Marketing",
+        issuer:
+          "ESPM (School of Advertising and Marketing), Porto Alegre, RS, Brazil",
+        date: "1999",
+      },
+    ],
+    languages: [
+      {
+        name: "Portuguese",
+        proficiency: "Level: Native",
       },
       {
-        name: "Certified Scrum Master",
-        issuer: "Scrum Alliance",
-        date: "2022",
+        name: "English",
+        proficiency: "Level: Advanced | Full professional proficiency",
+      },
+      {
+        name: "Spanish",
+        proficiency: "Level: Intermediate",
       },
     ],
   };
@@ -307,6 +319,27 @@ export default function CVPage() {
               <p className="text-gray-700 leading-relaxed print:text-base print:leading-snug">
                 {cvData.personalInfo.summary}
               </p>
+            </section>
+
+            {/* Skills */}
+            <section>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2 print:text-xl print:mb-2">
+                <PencilRuler
+                  className="w-5 h-5 text-blue-600"
+                  aria-hidden="true"
+                />
+                Technical Skills
+              </h2>
+              <div className="flex flex-wrap gap-2 print:gap-1">
+                {cvData.skills.map((skill, index) => (
+                  <span
+                    key={index}
+                    className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium print:bg-gray-100 print:text-gray-800 print:text-xs print:px-2 print:py-1"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </section>
 
             {/* Experience */}
@@ -449,19 +482,27 @@ export default function CVPage() {
               </div>
             </section>
 
-            {/* Skills */}
+            {/* Languages */}
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 print:text-xl print:mb-3">
-                Technical Skills
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2 print:text-xl print:mb-2">
+                <Globe className="w-5 h-5 text-blue-600" aria-hidden="true" />
+                Languages
               </h2>
-              <div className="flex flex-wrap gap-2 print:gap-1">
-                {cvData.skills.map((skill, index) => (
-                  <span
+              <div className="space-y-3 print:space-y-2">
+                {cvData.languages.map((language, index) => (
+                  <div
                     key={index}
-                    className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium print:bg-gray-100 print:text-gray-800 print:text-xs print:px-2 print:py-1"
+                    className="flex flex-col md:flex-row md:justify-between"
                   >
-                    {skill}
-                  </span>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 print:text-base">
+                        {language.name}
+                      </h3>
+                      <p className="text-gray-600 print:text-sm">
+                        {language.proficiency}
+                      </p>
+                    </div>
+                  </div>
                 ))}
               </div>
             </section>
@@ -470,7 +511,7 @@ export default function CVPage() {
             <section>
               <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2 print:text-xl print:mb-3">
                 <Award className="w-5 h-5 text-blue-600" aria-hidden="true" />
-                Certifications
+                Courses, Certifications
               </h2>
               <div className="space-y-3 print:space-y-2">
                 {cvData.certifications.map((cert, index) => (
