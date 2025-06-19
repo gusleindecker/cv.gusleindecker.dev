@@ -2,148 +2,171 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Print styles for PDF generation */
+/* Print styles for PDF generation - ATS Optimized */
 @media print {
   @page {
-    margin: 0.4in;
+    margin: 0.75in;
     size: A4;
   }
 
   body {
     -webkit-print-color-adjust: exact;
     color-adjust: exact;
+    font-family: Arial, sans-serif !important; /* ATS-friendly font */
     font-size: 11px;
-    line-height: 1.2;
+    line-height: 1.3;
+    color: #000000 !important; /* Pure black for better ATS parsing */
   }
 
-  /* Reduce header font sizes for print */
+  /* ATS-friendly heading hierarchy */
   h1 {
-    font-size: 20px !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
     margin-bottom: 4px !important;
+    color: #000000 !important;
   }
 
   h2 {
-    font-size: 16px !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
     margin-bottom: 6px !important;
+    margin-top: 12px !important;
+    color: #000000 !important;
+    text-transform: uppercase !important;
   }
 
   h3 {
-    font-size: 14px !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
     margin-bottom: 3px !important;
+    color: #000000 !important;
   }
 
   h4 {
-    font-size: 13px !important;
-    margin-bottom: 2px !important;
-  }
-
-  /* Compact spacing for print */
-  .print\:text-sm {
-    font-size: 10px !important;
-    line-height: 1.1 !important;
-  }
-
-  .print\:text-base {
     font-size: 11px !important;
-    line-height: 1.2 !important;
-  }
-
-  .print\:text-lg {
-    font-size: 12px !important;
-    line-height: 1.2 !important;
-  }
-
-  .print\:text-xl {
-    font-size: 14px !important;
-    line-height: 1.2 !important;
-  }
-
-  .print\:text-2xl {
-    font-size: 16px !important;
-    line-height: 1.2 !important;
-  }
-
-  .print\:text-3xl {
-    font-size: 18px !important;
-    line-height: 1.1 !important;
-  }
-
-  .print\:text-4xl {
-    font-size: 20px !important;
-    line-height: 1.1 !important;
-  }
-
-  /* Significantly reduce padding and margins for print */
-  .print\:p-4 {
-    padding: 8px !important;
-  }
-
-  .print\:p-6 {
-    padding: 12px !important;
-  }
-
-  .print\:mb-1 {
+    font-weight: bold !important;
     margin-bottom: 2px !important;
+    color: #000000 !important;
   }
 
-  .print\:mb-2 {
-    margin-bottom: 3px !important;
-  }
-
-  .print\:mb-3 {
-    margin-bottom: 4px !important;
-  }
-
-  .print\:mb-4 {
-    margin-bottom: 6px !important;
-  }
-
-  .print\:mb-6 {
-    margin-bottom: 8px !important;
-  }
-
-  .print\:space-y-1 > * + * {
-    margin-top: 2px !important;
-  }
-
-  .print\:space-y-2 > * + * {
-    margin-top: 3px !important;
-  }
-
-  .print\:space-y-3 > * + * {
-    margin-top: 4px !important;
-  }
-
-  .print\:space-y-4 > * + * {
-    margin-top: 6px !important;
-  }
-
-  .print\:space-y-6 > * + * {
-    margin-top: 8px !important;
-  }
-
-  .print\:space-y-8 > * + * {
-    margin-top: 10px !important;
-  }
-
-  .print\:leading-tight {
-    line-height: 1.1 !important;
-  }
-
-  .print\:leading-snug {
-    line-height: 1.2 !important;
-  }
-
-  .print\:hidden {
+  /* Remove all icons and graphics for ATS */
+  .print\:hide-icons svg,
+  .print\:hide-icons .lucide {
     display: none !important;
   }
 
-  .print\:bg-white {
-    background-color: white !important;
+  /* Simplified header for ATS */
+  .print\:ats-header {
+    background: none !important;
+    background-color: transparent !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin-bottom: 16px !important;
   }
 
-  .print\:bg-blue-600 {
-    background-color: #2563eb !important;
+  .print\:ats-header * {
+    color: #000000 !important;
+  }
+
+  /* Contact information formatting for ATS */
+  .print\:ats-contact {
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+    margin-top: 8px !important;
+  }
+
+  /* Remove complex borders and styling */
+  .print\:ats-simple {
+    border: none !important;
+    border-left: none !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  /* Simple bullet points for ATS */
+  .print\:ats-bullets {
+    list-style-type: disc !important;
+    margin-left: 20px !important;
+    padding-left: 0 !important;
+  }
+
+  .print\:ats-bullets li {
+    margin-bottom: 3px !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Skills formatting for ATS */
+  .print\:ats-skills {
+    line-height: 1.5 !important;
+    font-size: 11px !important;
+  }
+
+  /* Remove background colors and styling from skill tags */
+  .print\:ats-skills span {
+    background: none !important;
+    background-color: transparent !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    font-weight: normal !important;
+    display: inline !important;
+  }
+
+  .print\:ats-skills span:after {
+    content: " • ";
+  }
+
+  .print\:ats-skills span:last-child:after {
+    content: "";
+  }
+
+  /* Position skills formatting */
+  .print\:ats-position-skills {
+    margin-top: 4px !important;
+  }
+
+  .print\:ats-position-skills span {
+    background: none !important;
+    background-color: transparent !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    font-weight: normal !important;
+    display: inline !important;
+    font-size: 10px !important;
+  }
+
+  .print\:ats-position-skills span:after {
+    content: " • ";
+  }
+
+  .print\:ats-position-skills span:last-child:after {
+    content: "";
+  }
+
+  /* Remove timeline styling */
+  .print\:ats-timeline {
+    border: none !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .print\:ats-timeline .w-2 {
+    display: none !important;
+  }
+
+  /* Compact spacing for ATS */
+  .print\:ats-spacing {
+    margin-bottom: 8px !important;
+  }
+
+  .print\:ats-section-spacing {
+    margin-bottom: 12px !important;
+  }
+
+  /* Remove gradients and complex styling */
+  .print\:bg-white {
+    background-color: white !important;
   }
 
   .print\:shadow-none {
@@ -154,29 +177,29 @@
     border-radius: 0 !important;
   }
 
-  .print\:p-0 {
-    padding: 0 !important;
+  /* Hide non-essential elements */
+  .print\:hidden {
+    display: none !important;
   }
 
-  .print\:max-w-none {
-    max-width: none !important;
+  /* Ensure proper text color throughout */
+  .print\:text-black {
+    color: #000000 !important;
   }
 
-  .print\:bg-gray-100 {
-    background-color: #f3f4f6 !important;
+  /* Date formatting for ATS */
+  .print\:ats-dates {
+    font-style: normal !important;
+    font-weight: normal !important;
+    color: #000000 !important;
   }
 
-  .print\:text-gray-800 {
-    color: #1f2937 !important;
-  }
-
-  /* REMOVE page break restrictions to allow natural flow */
+  /* Remove page break restrictions for natural flow */
   section {
     break-inside: auto !important;
     page-break-inside: auto !important;
   }
 
-  /* Allow headings to break if needed */
   h1,
   h2,
   h3,
@@ -185,73 +208,15 @@
     page-break-after: auto !important;
   }
 
-  /* Compact skill tags for print */
-  .print\:text-xs {
-    font-size: 9px !important;
-    line-height: 1.1 !important;
-  }
-
-  .print\:px-2 {
-    padding-left: 4px !important;
-    padding-right: 4px !important;
-  }
-
-  .print\:py-1 {
-    padding-top: 1px !important;
-    padding-bottom: 1px !important;
-  }
-
-  /* Reduce list spacing */
-  ul,
-  ol {
-    margin-bottom: 4px !important;
-  }
-
-  li {
-    margin-bottom: 1px !important;
-  }
-
-  /* Compact paragraph spacing */
+  /* Paragraph spacing */
   p {
-    margin-bottom: 4px !important;
+    margin-bottom: 6px !important;
+    line-height: 1.3 !important;
   }
 
-  /* Minimal section spacing */
-  section + section {
-    margin-top: 6px !important;
-  }
-
-  /* Make skills section more compact */
-  .skills-container {
-    margin-bottom: 4px !important;
-  }
-
-  /* Reduce gap between skill tags */
-  .print\:gap-1 {
-    gap: 2px !important;
-  }
-
-  /* More compact header */
-  .print\:compact-header {
-    padding: 8px !important;
-  }
-
-  /* Allow experience section to break naturally */
-  .experience-section {
-    break-inside: auto !important;
-    page-break-inside: auto !important;
-  }
-
-  /* Allow company blocks to break if needed */
-  .company-block {
-    break-inside: auto !important;
-    page-break-inside: auto !important;
-  }
-
-  /* Prevent orphaned headings but allow breaks */
-  .company-header {
-    break-after: avoid !important;
-    page-break-after: avoid !important;
+  /* Remove complex positioning */
+  .print\:ats-position {
+    position: static !important;
   }
 }
 
