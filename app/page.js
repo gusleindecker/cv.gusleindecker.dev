@@ -13,18 +13,21 @@ import {
 } from "lucide-react";
 
 export default function CVPage() {
-  // You can update this data with your actual LinkedIn information
+  // CV data with personal info from environment variables
   const cvData = {
     personalInfo: {
-      name: "Gustavo Leindecker Pereira",
+      name: process.env.NEXT_PUBLIC_FULL_NAME || "Your Name",
       title:
         "Senior Frontend Engineer | Vue.js | React | TypeScript | Nuxt | Next.js | Tailwindcss | Node.js",
-      location: "Porto Alegre, RS, Brazil",
-      linkedin: "https://www.linkedin.com/in/gusleindecker/",
-      phone: "+55 (51) 991363037", // Phone for ATS
-      email: "gustalp@gmail.com", // email for ATS
-      github: "https://github.com/gusleindecker",
-      website: "https://gusleindecker.dev/",
+      location: process.env.NEXT_PUBLIC_LOCATION || "Your Location",
+      phone: process.env.NEXT_PUBLIC_PHONE || "+1 (555) 123-4567",
+      email: process.env.NEXT_PUBLIC_EMAIL || "your.email@example.com",
+      linkedin:
+        process.env.NEXT_PUBLIC_LINKEDIN ||
+        "https://www.linkedin.com/in/your-profile/",
+      github:
+        process.env.NEXT_PUBLIC_GITHUB || "https://github.com/your-username",
+      website: process.env.NEXT_PUBLIC_WEBSITE || "https://your-website.com/",
       summary: `A seasoned Frontend Engineer with a background in Advertising and over a decade of experience delivering high-quality web applications. Specialized in Vue.js (2 & 3), TypeScript, and modern JavaScript (ES6+), I've led the development of scalable, performant, and responsive user interfaces for the web. I also bring strong experience with React, Next.js, Nuxt, Tailwind CSS, SCSS, and Node.js, consistently transforming complex requirements into intuitive and visually refined digital experiences.
 
         As a technology professional, I'm deeply committed to continuous learning and growth. I stay ahead of industry trends, explore emerging tools, and value clean, maintainable code as much as user-centered design. I thrive in Agile environments, where cross-functional collaboration and adaptability are essential to building solutions that are not only technically sound but genuinely resonate with users.`,
@@ -541,7 +544,7 @@ export default function CVPage() {
 
       {/* Footer - hidden in print */}
       <footer className="text-center py-8 text-gray-600 print:hidden">
-        <p>Last updated: Jun 25, 2025</p>
+        <p>Last updated: Jun 20, 2025</p>
       </footer>
     </div>
   );
