@@ -229,8 +229,6 @@ export default function CVPage() {
       "Responsive Design",
       "Web Performance Optimization",
       "Accessibility",
-      "Agile",
-      "Scrum",
     ],
     certifications: [
       {
