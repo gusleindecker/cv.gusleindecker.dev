@@ -12,41 +12,29 @@
   body {
     -webkit-print-color-adjust: exact;
     color-adjust: exact;
-    font-family: Arial, sans-serif !important; /* ATS-friendly font */
+    font-family: Arial, sans-serif; /* ATS-friendly font */
     font-size: 11px;
     line-height: 1.3;
-    color: #000000 !important; /* Pure black for better ATS parsing */
+    color: #000000; /* Pure black for better ATS parsing */
   }
 
   /* ATS-friendly heading hierarchy */
   h1 {
     font-size: 18px !important;
-    font-weight: bold !important;
-    margin-bottom: 4px !important;
-    color: #000000 !important;
   }
 
   h2 {
     font-size: 14px !important;
-    font-weight: bold !important;
     margin-bottom: 6px !important;
-    margin-top: 12px !important;
-    color: #000000 !important;
-    text-transform: uppercase !important;
   }
 
   h3 {
     font-size: 12px !important;
-    font-weight: bold !important;
-    margin-bottom: 3px !important;
-    color: #000000 !important;
+    margin-bottom: 3px;
   }
 
   h4 {
     font-size: 11px !important;
-    font-weight: bold !important;
-    margin-bottom: 2px !important;
-    color: #000000 !important;
   }
 
   /* Remove all icons and graphics for ATS */
@@ -57,62 +45,40 @@
 
   /* Simplified header for ATS */
   .print\:ats-header {
-    background: none !important;
-    background-color: transparent !important;
-    color: #000000 !important;
+    background: none;
+    background-color: transparent;
     padding: 0 !important;
-    margin-bottom: 16px !important;
+    margin-bottom: 16px;
   }
 
   .print\:ats-header * {
-    color: #000000 !important;
+    color: #000000;
   }
 
   /* Contact information formatting for ATS */
   .print\:ats-contact {
-    font-size: 11px !important;
-    line-height: 1.4 !important;
-    margin-top: 8px !important;
+    font-size: 10px;
+    line-height: 1.3;
   }
 
   /* Remove complex borders and styling */
   .print\:ats-simple {
-    border: none !important;
-    border-left: none !important;
+    border-left: none;
     padding-left: 0 !important;
-    margin-left: 0 !important;
-  }
-
-  /* Simple bullet points for ATS */
-  .print\:ats-bullets {
-    list-style-type: disc !important;
-    margin-left: 20px !important;
-    padding-left: 0 !important;
-  }
-
-  .print\:ats-bullets li {
-    margin-bottom: 3px !important;
-    line-height: 1.3 !important;
   }
 
   /* Skills formatting for ATS */
-  .print\:ats-skills {
-    line-height: 1.5 !important;
-    font-size: 11px !important;
-  }
-
   /* Remove background colors and styling from skill tags */
   .print\:ats-skills span {
-    background: none !important;
-    background-color: transparent !important;
-    color: #000000 !important;
-    padding: 0 !important;
-    border-radius: 0 !important;
-    font-weight: normal !important;
-    display: inline !important;
+    background-color: transparent;
+    color: #000000;
+    padding: 0;
+    border-radius: 0;
+    font-size: 11px;
+    line-height: 1.3;
   }
 
-  .print\:ats-skills span:after {
+  .print\:ats-skills span:before {
     content: " • ";
   }
 
@@ -120,84 +86,38 @@
     content: "";
   }
 
-  /* Position skills formatting */
-  .print\:ats-position-skills {
-    margin-top: 4px !important;
-  }
-
   .print\:ats-position-skills span {
-    background: none !important;
-    background-color: transparent !important;
-    color: #000000 !important;
-    padding: 0 !important;
-    border-radius: 0 !important;
-    font-weight: normal !important;
-    display: inline !important;
-    font-size: 10px !important;
+    background-color: transparent;
+    color: #000000;
+    padding: 0;
+    border-radius: 0;
+    font-size: 11px;
+    line-height: 1.3;
   }
 
-  .print\:ats-position-skills span:after {
+  .print\:ats-position-skills span:before {
     content: " • ";
   }
 
-  .print\:ats-position-skills span:last-child:after {
-    content: "";
-  }
-
-  /* Remove timeline styling */
-  .print\:ats-timeline {
-    border: none !important;
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-  }
-
-  .print\:ats-timeline .w-2 {
-    display: none !important;
-  }
-
-  /* Compact spacing for ATS */
-  .print\:ats-spacing {
-    margin-bottom: 8px !important;
+  .print\:ats-position-description {
+    font-size: 11px;
   }
 
   .print\:ats-section-spacing {
     margin-bottom: 12px !important;
   }
 
-  /* Remove gradients and complex styling */
-  .print\:bg-white {
-    background-color: white !important;
-  }
-
   .print\:shadow-none {
-    box-shadow: none !important;
+    box-shadow: none;
   }
 
   .print\:rounded-none {
-    border-radius: 0 !important;
-  }
-
-  /* Hide non-essential elements */
-  .print\:hidden {
-    display: none !important;
-  }
-
-  /* Ensure proper text color throughout */
-  .print\:text-black {
-    color: #000000 !important;
+    border-radius: 0;
   }
 
   /* Date formatting for ATS */
   .print\:ats-dates {
-    font-style: normal !important;
-    font-weight: normal !important;
-    color: #000000 !important;
-  }
-
-  /* Remove page break restrictions for natural flow */
-  section {
-    break-inside: auto !important;
-    page-break-inside: auto !important;
+    font-size: 11px;
   }
 
   h1,
@@ -210,8 +130,7 @@
 
   /* Paragraph spacing */
   p {
-    margin-bottom: 6px !important;
-    line-height: 1.3 !important;
+    margin-bottom: 6px;
   }
 
   /* Remove complex positioning */
