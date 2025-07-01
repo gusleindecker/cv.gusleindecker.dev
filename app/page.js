@@ -49,9 +49,10 @@ export default function CVPage() {
             title: "Team Leader",
             duration: "July 2024 - Present",
             description: [
-              "• Leading a team of 6 consultants",
-              "• Facilitating personal and professional issues for the consultants, ensuring smooth project execution",
-              "• Improving team collaboration",
+              "• Managed a team of 6 consultants across diverse projects.",
+              "• Provided technical mentorship and individual support, facilitating both personal and professional growth.",
+              "• Held regular 1:1s and team syncs to ensure alignment, resolve blockers, and foster a collaborative, high-performing environment.",
+              "• Played a key role in maintaining team morale and cohesion, ensuring smooth project execution and consistent delivery.",
             ],
             skills: [
               "Mentoring",
@@ -76,6 +77,7 @@ export default function CVPage() {
             skills: [
               "HTML5",
               "JavaScript",
+              "Lit",
               "Node.js",
               "Pinia",
               "Tailwind CSS",
@@ -87,6 +89,7 @@ export default function CVPage() {
               "Vue Router",
               "Vue Use",
               "Vue.js",
+              "Web Components",
             ],
           },
           {
@@ -130,7 +133,10 @@ export default function CVPage() {
             title: "Senior Software Engineer - Frontend Specialist",
             duration: "October 2019 - July 2021",
             description: [
-              "Worked on the GETS team in developing and maintaining core Vue.js UI components that are reused in multiple internal ADP applications",
+              "• Contributed to internal tools that supported incident tracking and monitoring across ADP's software ecosystem.",
+              "• Built and maintained Vue.js-based UI component libraries, enabling reuse and consistency across multiple internal apps.",
+              "• Developed tools like Incident Tracker and monitoring dashboards, focusing on performance, reliability, and a smooth developer experience.",
+              "• Implemented comprehensive unit testing aligned with team quality gates, ensuring code robustness and maintainability.",
             ],
             skills: [
               "CSS3",
@@ -140,11 +146,11 @@ export default function CVPage() {
               "Jest",
               "RESTful APIs",
               "Sass",
-              "SCSS",
               "TypeScript",
               "Vue Router",
               "Vue.js",
               "Vuex",
+              "Web Components",
               "Webpack",
             ],
           },
@@ -164,7 +170,9 @@ export default function CVPage() {
             title: "Senior Software Engineer - Frontend Specialist",
             duration: "July 2017 - October 2019",
             description: [
-              "Worked on the Dell Financial Services team developing the Customer Portal: Dell's end-user application for managing consumer, small business and enterprise finance accounts in US",
+              "• Contributed to Customer Portal, a key app in the Dell Financial Services (DFS) ecosystem that enabled consumers, small businesses, and enterprises to manage their DELL financial accounts in the US. The project stood out for its forward-thinking design and improved UX, marking a notable step forward in DELL's digital customer experience at the time.",
+              "• Built modern, responsive UIs using Angular.js, Angular Material, Sass, and HTML5, integrated with Salesforce backends.",
+              "• Wrote unit tests with Jest, Mocha, and Chai, ensuring reliability and performance.",
             ],
             skills: [
               "Angular",
@@ -198,19 +206,21 @@ export default function CVPage() {
             title: "Senior Frontend Developer",
             duration: "September 2015 - July 2017",
             description: [
-              "Worked initially on the TNT team as an outsourced Frontend Developer for Dell Technologies developing A/B tests on the company's various e-commerce sites",
-              "Later worked in the Dell Financial Services team developing the Customer Portal US",
+              "• Worked as a consultant for DELL Technologies on the TNT team, focusing on developing A/B tests across DELL's global e-commerce sites.",
+              "• Used Adobe Target to inject and manage UI variations, requiring advanced JavaScript skills to dynamically modify complex user interfaces without access tothe underlying codebase.",
+              "• Used and developed strong problem-solving abilities and further sharpened proficiency in vanilla JavaScript for real-time, data-driven experimentation at scale.",
             ],
             skills: [
-              "JavaScript",
-              "HTML5",
-              "CSS3",
-              "jQuery",
-              "Bootstrap",
-              "Git",
               "A/B Testing",
-              "React",
+              "Adobe Target",
+              "Bootstrap",
+              "CSS3",
+              "Git",
+              "HTML5",
+              "JavaScript",
+              "jQuery",
               "Node.js",
+              "React",
             ],
           },
         ],
@@ -229,18 +239,20 @@ export default function CVPage() {
             title: "Frontend Developer / UI Designer",
             duration: "April 2014 - September 2015",
             description: [
-              "Worked as a frontend developer and user interface designer on several projects for the company",
+              "Worked as a frontend developer and user interface designer on several projects for the company.",
             ],
             skills: [
-              "JavaScript",
-              "HTML5",
-              "CSS3",
-              "jQuery",
-              "Bootstrap",
-              "Git",
               "Adobe Photoshop",
               "Adobe XD",
               "Backbone.js",
+              "Bootstrap",
+              "CSS3",
+              "Git",
+              "HTML5",
+              "JavaScript",
+              "jQuery",
+              "PHP",
+              "Wordpress",
             ],
           },
         ],
@@ -264,7 +276,6 @@ export default function CVPage() {
       "Nuxt.js",
       "Next.js",
       "Tailwind CSS",
-      "SCSS",
       "Sass",
       "Node.js",
       "Express.js",
@@ -280,6 +291,12 @@ export default function CVPage() {
       "Responsive Design",
       "Web Performance Optimization",
       "Accessibility",
+      "Adobe Target",
+      "Web Components",
+      "Lit",
+      "ESLint",
+      "Prettier",
+      "MongoDB",
     ],
     certifications: [
       {
@@ -305,9 +322,9 @@ export default function CVPage() {
     ],
   };
 
-  const handleDownloadPDF = () => {
-    window.print();
-  };
+  // const handleDownloadPDF = () => {
+  //   window.print();
+  // };
 
   return (
     <div className="min-h-screen bg-gray-50 print:bg-white">
@@ -315,14 +332,26 @@ export default function CVPage() {
       <header className="bg-white shadow-sm print:hidden sticky top-0 z-10">
         <div className="max-w-4xl mx-auto px-2 sm:px-4 py-4 flex justify-between items-center">
           <h1 className="text-xl font-semibold text-gray-900">Resume</h1>
-          <button
-            onClick={handleDownloadPDF}
-            className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-            aria-label="Download CV as PDF"
-          >
-            <Download className="w-4 h-4" />
-            Download PDF
-          </button>
+
+          <div>
+            <a
+              href="Gustavo-Leindecker-Pereira_cv202507.pdf"
+              download="Gustavo-Leindecker-Pereira_resume.pdf"
+              className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              aria-label="Download CV as PDF"
+            >
+              <Download className="w-4 h-4" />
+              Download PDF
+            </a>
+            {/* <button
+              onClick={handleDownloadPDF}
+              className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              aria-label="Download CV as PDF"
+            >
+              <Download className="w-4 h-4" />
+              Download PDF
+            </button> */}
+          </div>
         </div>
       </header>
 
