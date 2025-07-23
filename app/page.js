@@ -30,24 +30,73 @@ export default function CVPage() {
       website: process.env.NEXT_PUBLIC_WEBSITE || "https://your-website.com/",
       summary: [
         "Expert in Vue.js, TypeScript, JavaScript (ES6+), HTML5, CSS3 (including Sass/Tailwind), with deep knowledge of frontend build tools (Vite, Webpack) and testing frameworks (Jest, Cypress).",
-        "Led architecture, development, and maintenance of high-traffic web applications, consistently improving performance (reducing load time by 30-50%) and enhancing UX. I've built scalable UI libraries, implemented component-driven design systems, and orchestrated end-to-end feature delivery, from planning to deployment, impacting both developer productivity and user satisfaction.",
+        "Led architecture, development, and maintenance of business-critical web applications, consistently improving performance (reducing load time by 30-50%) and enhancing UX. I've built scalable UI libraries, implemented component-driven design systems, and orchestrated end-to-end feature delivery, from planning to deployment, impacting both developer productivity and user satisfaction.",
         "Thrive in fast-paced, Agile environments: I collaborate closely with cross-functional teams (designers, backend, QA), contribute actively to code reviews and CI/CD pipelines, and mentor junior engineers, driving high-quality, maintainable code under tight delivery schedules.",
         "Skilled at aligning technical solutions to strategic goals, I blend hands-on coding with visionary thinking to build robust, future-proof front ends. I'm now looking to elevate complex, user-centric products with impact-driven engineering and innovation.",
       ],
     },
     experience: [
       {
+        company: "Self Employed",
+        description: "",
+        location: "Remote",
+        totalDuration: `June 2025 - Present (${getTimeElapsed(
+          new Date("2025-06-15")
+        )})`,
+        positions: [
+          {
+            title: "Freelance Front-end Engineer / UX/UI Designer",
+            duration: "June 2025 - Present",
+            description: [
+              "Delivering front-end engineering and UX/UI consulting services while actively seeking full-time opportunities. Specializing in building performant, scalable web applications using Vue.js, Nuxt, React or Next.js.",
+              "Designing and developing responsive, accessible UIs with a strong focus on performance and usability.",
+              "Collaborating with clients and cross-functional teams to deliver robust features from concept to production.",
+              "Leveraging modern tools such as Vite, Webpack, Vitest, ESLint, and Prettier to ensure code quality and delivery speed.",
+              "Contributing to open source projects to give back to the dev community, stay current with best practices, and collaborate with engineers worldwide.",
+              "Expanding backend skills with Node.js, Express.js, NestJS, MongoDB and Supabase to gain a broader full-stack perspective.",
+              "Open to full-time roles where I can apply my technical expertise and product thinking to build impactful user-centric applications.",
+            ],
+            skills: [
+              "Accessibility",
+              "Adobe XD",
+              "CSS3",
+              "ESLint",
+              "Figma",
+              "Git",
+              "HTML5",
+              "JavaScript",
+              "Next.js",
+              "Nuxt",
+              "Prettier",
+              "React",
+              "Responsive Design",
+              "Tailwind CSS",
+              "TypeScript",
+              "UI Design",
+              "Usability",
+              "UX Design",
+              "Vercel",
+              "Vite",
+              "Vitest",
+              "Vue.js",
+              "Web Performance Optimization",
+            ],
+          },
+        ],
+      },
+      {
         company: "Software Mind North America",
         description:
           "Software Mind is a global software company offering engineering, cloud, and AI solutions with 1,500+ experts worldwide.",
         location: "Remote",
-        totalDuration: `July 2021 - Present (${getTimeElapsed(
-          new Date("2021-07-15")
+        totalDuration: `July 2021 - June 2025 (${getTimeElapsed(
+          new Date("2021-07-15"),
+          new Date("2025-06-15")
         )})`,
         positions: [
           {
             title: "Team Leader",
-            duration: "July 2024 - Present",
+            duration: "July 2024 - June 2025",
             description: [
               "• Managed a team of 6 consultants across diverse projects.",
               "• Provided technical mentorship and individual support, facilitating both personal and professional growth.",
@@ -335,8 +384,8 @@ export default function CVPage() {
 
           <div>
             <a
-              href="Gustavo-Leindecker-Pereira_cv202507.pdf"
-              download="Gustavo-Leindecker-Pereira_resume.pdf"
+              href="Gustavo-Leindecker-Pereira.resume.pdf"
+              download="Gustavo-Leindecker-Pereira.resume.pdf"
               className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               aria-label="Download CV as PDF"
             >
