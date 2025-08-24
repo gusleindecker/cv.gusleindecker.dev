@@ -37,11 +37,55 @@ export default function CVPage() {
     },
     experience: [
       {
+        company: "Novacomp",
+        description:
+          "Costa Rica-based IT services and nearshoring company specializing in software testing, cybersecurity, custom development, cloud solutions, and digital transformation. Recognized as a Great Place to Work (2024) and Top B2B Company by Clutch (2021).",
+        location: "Remote",
+        totalDuration: `August 2025 - Present (${getTimeElapsed(
+          new Date("2025-08-18")
+        )})`,
+        positions: [
+          {
+            title:
+              "Senior Front-end Engineer - (Confidential client, IT Industry)",
+            duration: "August 2025 - Present",
+            description: [
+              "Developing performant, scalable, and accessible web applications with Vue.js.",
+              "Implementing new features and enhancements in the company's application.",
+              "Leading the migration of components from Vue 2 to Vue 3, modernizing the codebase while ensuring stability and maintainability.",
+              "Collaborating with product and backend teams to define technical approaches and deliver robust solutions.",
+              "Leveraging modern tooling (Vite, Webpack, Vitest, ESLint, Prettier) to ensure high code quality and efficient workflows.",
+              "Sharing best practices and supporting teammates in adopting modern frontend patterns and migration strategies.",
+            ],
+            skills: [
+              "Accessibility",
+              "CSS3",
+              "ESLint",
+              "Git",
+              "HTML5",
+              "JavaScript",
+              "Jest",
+              "Prettier",
+              "Sass",
+              "Tailwind CSS",
+              "TypeScript",
+              "Usability",
+              "Vite",
+              "Vitest",
+              "Vue.js",
+              "Web Performance Optimization",
+              "Webpack",
+            ],
+          },
+        ],
+      },
+      {
         company: "Self Employed",
         description: "",
         location: "Remote",
-        totalDuration: `June 2025 - Present (${getTimeElapsed(
-          new Date("2025-06-15")
+        totalDuration: `June 2025 - August 2025 (${getTimeElapsed(
+          new Date("2025-06-15"),
+          new Date("2025-08-18")
         )})`,
         positions: [
           {
