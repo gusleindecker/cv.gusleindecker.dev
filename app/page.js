@@ -29,7 +29,7 @@ export default function CVPage() {
         process.env.NEXT_PUBLIC_GITHUB || "https://github.com/your-username",
       website: process.env.NEXT_PUBLIC_WEBSITE || "https://your-website.com/",
       summary: [
-        "Expert in Vue.js, TypeScript, JavaScript (ES6+), HTML5, CSS3 (including Sass/Tailwind), with deep knowledge of frontend build tools (Vite, Webpack) and testing frameworks (Jest, Cypress).",
+        "Expert in Vue.js, TypeScript, JavaScript (ES6+), HTML5, CSS3 (including Sass/Tailwind), with deep knowledge of frontend build tools (Vite, Webpack) and testing frameworks (Jest, Vitest).",
         "Led architecture, development, and maintenance of business-critical web applications, consistently improving performance (reducing load time by 30-50%) and enhancing UX. I've built scalable UI libraries, implemented component-driven design systems, and orchestrated end-to-end feature delivery, from planning to deployment, impacting both developer productivity and user satisfaction.",
         "Thrive in fast-paced, Agile environments: I collaborate closely with cross-functional teams (designers, backend, QA), contribute actively to code reviews and CI/CD pipelines, and mentor junior engineers, driving high-quality, maintainable code under tight delivery schedules.",
         "Skilled at aligning technical solutions to strategic goals, I blend hands-on coding with visionary thinking to build robust, future-proof front ends. I'm now looking to elevate complex, user-centric products with impact-driven engineering and innovation.",
