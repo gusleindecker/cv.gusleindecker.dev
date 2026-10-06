@@ -2,8 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+    --border: 214 32% 91%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    --accent: 217 33% 20%;
+    --accent-foreground: 210 40% 98%;
+    --border: 217 33% 25%;
+  }
+}
+
 /* Print styles for PDF generation - ATS Optimized */
 @media print {
+  html {
+    color-scheme: light !important;
+  }
+
+  body,
+  .cv-page {
+    background: white !important;
+  }
+
+  .cv-page main * {
+    color: black !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
   @page {
     margin: 0.75in;
     size: A4;
